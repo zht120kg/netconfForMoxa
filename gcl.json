@@ -1,0 +1,874 @@
+{
+  "52:54:00:4a:e6:ba=9": {
+    "portInfo": {
+      "key": "52:54:00:4a:e6:ba",
+      "value": 9
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 3,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 29000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 28000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22343000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:4a:e6:ba=8": {
+    "portInfo": {
+      "key": "52:54:00:4a:e6:ba",
+      "value": 8
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 3,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 29000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 28000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22343000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:65:35:85=0": {
+    "portInfo": {
+      "key": "52:54:00:65:35:85",
+      "value": 0
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 2,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22382000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:54:23:0f=0": {
+    "portInfo": {
+      "key": "52:54:00:54:23:0f",
+      "value": 0
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 2,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22382000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:54:0f:29=2": {
+    "portInfo": {
+      "key": "52:54:00:54:0f:29",
+      "value": 2
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 3,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 11000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22371000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:5b:89:4d=1": {
+    "portInfo": {
+      "key": "52:54:00:5b:89:4d",
+      "value": 1
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 3,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 11000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22371000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:51:4b:24=0": {
+    "portInfo": {
+      "key": "52:54:00:51:4b:24",
+      "value": 0
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 2,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22382000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:ca:3d:db=0": {
+    "portInfo": {
+      "key": "52:54:00:ca:3d:db",
+      "value": 0
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 2,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22382000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:3f:cc:5f=0": {
+    "portInfo": {
+      "key": "52:54:00:3f:cc:5f",
+      "value": 0
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 2,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22382000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:b7:cf:4f=0": {
+    "portInfo": {
+      "key": "52:54:00:b7:cf:4f",
+      "value": 0
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 2,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22382000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:e6:ce:69=0": {
+    "portInfo": {
+      "key": "52:54:00:e6:ce:69",
+      "value": 0
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 2,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22382000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  },
+  "52:54:00:4d:e9:b4=0": {
+    "portInfo": {
+      "key": "52:54:00:4d:e9:b4",
+      "value": 0
+    },
+    "operCycleTime": 22400000,
+    "operBaseTime": 0,
+    "operControlListLength": 2,
+    "operControlList": [
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "timeIntervalValue": 18000
+      },
+      {
+        "operationName": null,
+        "gateStatesValue": {
+          "queueIndList": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "gateStateList": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "timeIntervalValue": 22382000
+      }
+    ],
+    "timeIntervalGranularity": 1000
+  }
+}

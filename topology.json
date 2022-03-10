@@ -1,0 +1,298 @@
+{
+  "switches": [
+    {
+      "alias": "moxa-g5004",
+      "ipAddr": "192.168.0.253",
+      "portNum": 4,
+      "ports": [
+        {
+          "index": 1,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:8a:77:84",
+          "ifOperStatus": "up",
+          "stpPortState": "forwarding"
+        },
+        {
+          "index": 2,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:8a:77:85",
+          "ifOperStatus": "up",
+          "stpPortState": "forwarding"
+        },
+        {
+          "index": 3,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:8a:77:86",
+          "ifOperStatus": "down",
+          "stpPortState": "blocking"
+        },
+        {
+          "index": 4,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:8a:77:87",
+          "ifOperStatus": "up",
+          "stpPortState": "forwarding"
+        }
+      ]
+    },
+    {
+      "alias": "moxa-g5008",
+      "ipAddr": "192.168.0.254",
+      "portNum": 8,
+      "ports": [
+        {
+          "index": 1,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:9c:6e:0a",
+          "ifOperStatus": "down",
+          "stpPortState": "blocking"
+        },
+        {
+          "index": 2,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:9c:6e:0b",
+          "ifOperStatus": "down",
+          "stpPortState": "blocking"
+        },
+        {
+          "index": 3,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:9c:6e:0c",
+          "ifOperStatus": "down",
+          "stpPortState": "blocking"
+        },
+        {
+          "index": 4,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:9c:6e:0d",
+          "ifOperStatus": "down",
+          "stpPortState": "blocking"
+        },
+        {
+          "index": 5,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:9c:6e:0e",
+          "ifOperStatus": "down",
+          "stpPortState": "blocking"
+        },
+        {
+          "index": 6,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:9c:6e:0f",
+          "ifOperStatus": "up",
+          "stpPortState": "forwarding"
+        },
+        {
+          "index": 7,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:9c:6e:10",
+          "ifOperStatus": "up",
+          "stpPortState": "forwarding"
+        },
+        {
+          "index": 8,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "00:90:e8:9c:6e:11",
+          "ifOperStatus": "up",
+          "stpPortState": "forwarding"
+        }
+      ]
+    },
+    {
+      "alias": "RSPE-64603820396E",
+      "ipAddr": "192.168.0.7",
+      "portNum": 13,
+      "ports": [
+        {
+          "index": 1,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:73",
+          "ifOperStatus": "up",
+          "stpPortState": "blocking"
+        },
+        {
+          "index": 2,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:74",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 3,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:75",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 4,
+          "portRate": "1000000000",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:76",
+          "ifOperStatus": "up",
+          "stpPortState": "forwarding"
+        },
+        {
+          "index": 5,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:77",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 6,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:78",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 7,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:79",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 8,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:7a",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 9,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:7b",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 10,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:7c",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 11,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:7d",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 12,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:7e",
+          "ifOperStatus": "down",
+          "stpPortState": "disabled"
+        },
+        {
+          "index": 85,
+          "portRate": "0",
+          "queueNum": 8,
+          "portMacAddr": "64:60:38:20:39:6e",
+          "ifOperStatus": "up",
+          "stpPortState": ""
+        }
+      ]
+    }
+  ],
+  "endstations": [
+    {
+      "alias": "es1",
+      "macAddr": "c4:00:ad:57:51:e6",
+      "portNum": 1,
+      "ports": [
+        {
+          "index": 1,
+          "portRate": "1000000000",
+          "queueNum": 8
+        }
+      ]
+    },
+    {
+      "alias": "es2",
+      "macAddr": "c4:00:ad:57:52:28",
+      "portNum": 1,
+      "ports": [
+        {
+          "index": 1,
+          "portRate": "1000000000",
+          "queueNum": 8
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "Alias": "link1",
+      "speed": 1000,
+      "originDevAlias": "moxa-g5004",
+      "originPortInd": 1,
+      "sinkDevAlias": "moxa-g5008",
+      "sinkPortInd": 8,
+      "direction": "bidirectional"
+    },
+    {
+      "Alias": "link2",
+      "speed": 1000,
+      "originDevAlias": "moxa-g5004",
+      "originPortInd": 2,
+      "sinkDevAlias": "RSPE-64603820396E",
+      "sinkPortInd": 1,
+      "direction": "bidirectional"
+    },
+    {
+      "Alias": "link3",
+      "speed": 1000,
+      "originDevAlias": "moxa-g5004",
+      "originPortInd": 4,
+      "sinkDevAlias": "es1",
+      "sinkPortInd": 1,
+      "direction": "bidirectional"
+    },
+    {
+      "Alias": "link4",
+      "speed": 1000,
+      "originDevAlias": "moxa-g5008",
+      "originPortInd": 7,
+      "sinkDevAlias": "es2",
+      "sinkPortInd": 1,
+      "direction": "bidirectional"
+    },
+    {
+      "Alias": "link5",
+      "speed": 1000,
+      "originDevAlias": "RSPE-64603820396E",
+      "originPortInd": 4,
+      "sinkDevAlias": "moxa-g5008",
+      "sinkPortInd": 1,
+      "direction": "bidirectional"
+    }
+  ]
+}
