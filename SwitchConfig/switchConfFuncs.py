@@ -1,35 +1,35 @@
 
 import json2XML
-import nc_operations
+#import nc_operations
 
 
 
-def PortConf():
-    host='192.168.0.253'
-    for payload in json2XML.portInitialPayloadList:
+def PortConf(moxaSwitch):
+    host=moxaSwitch.ipAddr
+    for payload in moxaSwitch.portInitialPayloadList:
         print(payload)
-        nc_operations.editConfig(host,payload)
+        #nc_operations.editConfig(host,payload)
         
 
 
-def SlotConf():
-    host='192.168.0.253'
-    for payload in json2XML.createSlotPayloadList:
+def SlotConf(moxaSwitch):
+    host=moxaSwitch.ipAddr
+    for payload in moxaSwitch.createSlotPayloadList:
         print(payload)
-        nc_operations.editConfig(host,payload)
+        #nc_operations.editConfig(host,payload)
         
-
+json2XML.GetSwitchInfo()
 json2XML.gcl2XML()
-#PortConf()
-#SlotConf()
+PortConf(json2XML.moxaSwitchList[1])
+SlotConf(json2XML.moxaSwitchList[1])
 
 
-def DeleteGCL():
+# def DeleteGCL():
     
-    json2XML.topo2XML()
+#     json2XML.topo2XML()
 
-    for switch in json2XML.switchList:
-        for payload in switch.deleteSlotPayloadList:
-            nc_operations.editConfig(str(switch.ipAddr),payload)
+#     for switch in json2XML.moxaSwitchList:
+#         for payload in switch.deleteSlotPayloadList:
+#             nc_operations.editConfig(str(switch.ipAddr),payload)
         
 
