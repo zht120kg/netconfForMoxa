@@ -1,5 +1,5 @@
 #对端口的gcl使能、时间槽数量和循环时间进行设定
-def portInitialPayload(portID,portEnabled,gateEnabled,controlListLength,cycleTime):
+def portInitialPayload(portID,controlListLength,cycleTime,portEnabled=True,gateEnabled=True):
   payload="""
 <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:sched="urn:ieee:std:802.1Q:yang:ieee802-dot1q-sched">
@@ -89,3 +89,59 @@ def getSlotIndexPayload(portID):
 """
   return payload
 
+
+
+#赫斯曼交换机的CLI配置方法
+def raiseSingleGCL_CLI(slotID,queueIndex,timeIntervalValue):
+  singleGCL='tsn gcl add id ' +str(slotID)+ ' gate-states ' +queueIndex+ ' interval ' +str(timeIntervalValue)\
+    +'\n'
+  return singleGCL
+
+
+
+def raiseHirschmannSwitchCLI(portID,gcl_CLIs):
+  if portID!=1 and portID!=2:  #赫斯曼交换机的常用TSN口只有1口与2口
+    return 
+    #print("Only Port1 & Port2 are TSN Ports")
+  else: 
+    ScriptContent='interface 1/'+str(portID)+'\n'+ gcl_CLIs +'tsn commit\n'+'exit\n'  
+    return ScriptContent
+
+
+
+
+
+    #import os
+    #from stat import  S_IRWXU
+    # ScriptPath='./HirschmannCLI.sh'
+    # with open(ScriptPath,"w") as Script:
+    #   Script.writelines(ScriptContent)
+    # os.chmod(ScriptPath,S_IRWXU)  #给脚本添加执行权限
+
+
+  
+
+
+    """
+    !/bin/sh
+    
+    user="admin"
+    password="private"
+    ip="""+ipAddr+"""
+    
+    {
+      sleep 1
+      echo "$user";     // 登录用户名
+      sleep 1
+      echo "$password";     // 登录密码
+      enbale
+      configure
+    """
+
+    """
+      exit
+      exit
+      logout
+      y         
+    }|telnet $ip
+    """
