@@ -1,0 +1,289 @@
+{
+  "192.168.0.7": {
+    "metadata": {
+      "ip": "192.168.0.7",
+      "macAdrr": null
+    },
+    "portInfo": {
+      "52:54:00:4a:e6:ba=1": {
+        "portInfo": {
+          "key": "52:54:00:4a:e6:ba",
+          "value": 1
+        },
+        "operCycleTime": 22400000,
+        "operBaseTime": 0,
+        "operControlListLength": 3,
+        "operControlList": [
+          {
+            "operationName": null,
+            "gateStatesValue": {
+              "queueIndList": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "gateStateList": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            "timeIntervalValue": 29000
+          },
+          {
+            "operationName": null,
+            "gateStatesValue": {
+              "queueIndList": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "gateStateList": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "timeIntervalValue": 28000
+          },
+          {
+            "operationName": null,
+            "gateStatesValue": {
+              "queueIndList": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "gateStateList": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            "timeIntervalValue": 22343000
+          }
+        ],
+        "timeIntervalGranularity": 1000
+      },
+      "52:54:00:4a:e6:ba=2": {
+        "portInfo": {
+          "key": "52:54:00:4a:e6:ba",
+          "value": 2
+        },
+        "operCycleTime": 22400000,
+        "operBaseTime": 0,
+        "operControlListLength": 3,
+        "operControlList": [
+          {
+            "operationName": null,
+            "gateStatesValue": {
+              "queueIndList": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "gateStateList": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            "timeIntervalValue": 29000
+          },
+          {
+            "operationName": null,
+            "gateStatesValue": {
+              "queueIndList": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "gateStateList": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "timeIntervalValue": 28000
+          },
+          {
+            "operationName": null,
+            "gateStatesValue": {
+              "queueIndList": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "gateStateList": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            "timeIntervalValue": 22343000
+          }
+        ],
+        "timeIntervalGranularity": 1000
+      }
+  }
+    },
+    "192.168.0.254": {
+      "metadata": {
+        "ip": "192.168.0.254",
+        "macAdrr": null
+      },
+      "portInfo": {
+        "52:54:00:4a:e6:ba=1": {
+          "portInfo": {
+            "key": "52:54:00:4a:e6:ba",
+            "value": 1
+          },
+          "operCycleTime": 22400000,
+          "operBaseTime": 0,
+          "operControlListLength": 3,
+          "operControlList": [
+            {
+              "operationName": null,
+              "gateStatesValue": {
+                "queueIndList": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "gateStateList": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "timeIntervalValue": 29000
+            },
+            {
+              "operationName": null,
+              "gateStatesValue": {
+                "queueIndList": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "gateStateList": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "timeIntervalValue": 28000
+            },
+            {
+              "operationName": null,
+              "gateStatesValue": {
+                "queueIndList": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "gateStateList": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "timeIntervalValue": 22343000
+            }
+          ],
+          "timeIntervalGranularity": 1000
+        }
+    }
+      }
+    
+  }
