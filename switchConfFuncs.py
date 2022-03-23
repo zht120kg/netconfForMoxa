@@ -12,7 +12,6 @@ def PortConf(moxaSwitch):
         #nc_operations.editConfig(host,payload)
         
 
-
 def SlotConf(moxaSwitch):
     host=moxaSwitch.ipAddr
     for payload in moxaSwitch.createSlotPayloadList:
@@ -33,9 +32,10 @@ def CLIConf(hirschmannSwitch):
 
 json2XML.GetSwitchInfo()
 json2XML.gcl2CLI()
+json2XML.gcl2XML()
 CLIConf(json2XML.hirschmannSwitchList[0])
-#PortConf(json2XML.moxaSwitchList[0])
-#SlotConf(json2XML.moxaSwitchList[0])
+PortConf(json2XML.moxaSwitchList[0])
+SlotConf(json2XML.moxaSwitchList[0])
 
 
 def DeleteGCL():
