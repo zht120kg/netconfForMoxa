@@ -119,7 +119,7 @@ password="private"
 ip="""+'\"'+hirschmannSwitch.ipAddr+'\"'+"""
 sshpass -p $password ssh $user@$ip  <<remotessh  
 
-enbale
+enable
 configure\n
 """
         for item in hirschmannSwitch.CLIConfList:

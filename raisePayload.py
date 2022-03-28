@@ -105,7 +105,7 @@ def raiseHirschmannSwitchCLI(portID,cycleTime,gcl_CLIs):
     #print("Only Port1 & Port2 are TSN Ports")
   else: 
     ScriptContent="""interface 1/"""+str(portID)+"""
-tsn delete all
+tsn gcl delete all
 tsn gates operation enable
 tsn cycle-time """+str(cycleTime)+'\n'+ gcl_CLIs +'tsn commit\n'+'exit\n'  
     return ScriptContent
