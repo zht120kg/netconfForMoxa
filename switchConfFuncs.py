@@ -30,12 +30,7 @@ def CLIConf(hirschmannSwitch):
     #print(data.read())
 
 
-json2XML.GetSwitchInfo()
-json2XML.gcl2CLI()
-json2XML.gcl2XML()
-CLIConf(json2XML.hirschmannSwitchList[0])
-PortConf(json2XML.moxaSwitchList[0])
-SlotConf(json2XML.moxaSwitchList[0])
+
 
 
 def DeleteGCL():
@@ -44,7 +39,11 @@ def DeleteGCL():
 
     for switch in json2XML.moxaSwitchList:
         for payload in switch.deleteSlotPayloadList:
-            #nc_operations.editConfig(str(switch.ipAddr),payload)
             pass
-        
-
+            #nc_operations.editConfig(str(switch.ipAddr),payload)
+            
+json2XML.GetSwitchInfo()
+json2XML.gcl2CLI()     
+if len(json2XML.hirschmannSwitchList)!=0:
+    for switch in json2XML.hirschmannSwitchList:
+        CLIConf(switch)

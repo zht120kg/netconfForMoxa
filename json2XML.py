@@ -10,22 +10,24 @@ class switch:
 class moxaSwitch(switch):
     def __init__(self,ipAddr,portNum):
         super().__init__(ipAddr,portNum)
-        self.portInitialPayloadList=[]  #存储端口配置信息的xml列表
-        self.createSlotPayloadList=[]   #存储时间草配置循序的xml列表
-        self.deleteSlotPayloadList=[]   #存储删除gcl的xml列表
+        self.portInitialPayloadList=[]  #存储端口配置信息的xml
+        self.createSlotPayloadList=[]   #存储时间槽配置循序的xml
+        self.deleteSlotPayloadList=[]   #存储删除gcl的xml
 
 class hirschmannSwitch(switch):
     def __init__(self,ipAddr,portNum):
         super().__init__(ipAddr,portNum)
         self.CLIConfList=[] #存储配置赫斯曼交换机的CLI（Telnet）
 
+
+
 #获取拓扑json中moxa交换机与赫斯曼交换机的ip地址，用于后续与gcl中的ip进行对比
 #目前只有moxa能够通过netconf进行配置
 def GetSwitchInfo():
 
-    global moxaSwitchList   #用于存放支持NETCONF的交换机实例,目前为moxa
+    global moxaSwitchList   #用于存放moxa交换机实例，使用NETCONF进行配置
     moxaSwitchList=[]
-    global hirschmannSwitchList #用于存放CLI配置gcl的交换机实例，目前为赫斯曼
+    global hirschmannSwitchList #用于存放赫斯曼交换机实例，使用CLI进行配置
     hirschmannSwitchList=[]
     with open('./SwitchConfig/topology.json','r',encoding='utf8') as topo:
         topo_dic=json.load(topo)
@@ -36,38 +38,27 @@ def GetSwitchInfo():
                 moxaSwitchList.append(switch_moxa)
             elif ('RSPE' in item['alias'])==True:
                 switch_hirschmann=hirschmannSwitch(item['ipAddr'],item['portNum'])
-                hirschmannSwitchList.append(switch_hirschmann)
-            
-        
-        # for item in moxaSwitchList:
-        #     print(item.ipAddr,item.portNum)
-        #     print(type(item.ipAddr),type(item.portNum))
+                hirschmannSwitchList.append(switch_hirschmann)                  
 
 #根据gcl生成netconf配置的xml
 def gcl2XML():
     global moxaSwitchList
-
     #打开json文件并存储为字典
     with open('./SwitchConfig/gcl-example.json','r',encoding='utf8') as gcl:
-        gcl_dic=json.load(gcl)
-        #print(gcl_dic)
-    
+        gcl_dic=json.load(gcl)           
     for switch in moxaSwitchList:
-         #将gcl字典中的元素存入列表（该列表中的单个元素为单个端口的gcl信息）   
+        #将gcl字典中的元素存入列表（该列表中的单个元素为单个端口的gcl信息）   
         portInfo_gcls=[]
         for portInfo in gcl_dic[switch.ipAddr]['portInfo']:            
             portInfo_gcls.append(gcl_dic[switch.ipAddr]['portInfo'][portInfo])
-
         #生成用于netconf配置的xml信息
         for singlePort in portInfo_gcls:
             portID=singlePort['portInfo']['value']          
             controlListLength=singlePort['operControlListLength']
-            cycleTime=singlePort['operCycleTime']
-            
+            cycleTime=singlePort['operCycleTime']            
             #生成NETCONF端口配置xml
             portConfig=raisePayload.portInitialPayload(portID,controlListLength,cycleTime)
             switch.portInitialPayloadList.append(portConfig)
-
             i=0
             for CtlList_item in singlePort['operControlList']:
                 gateStateList=CtlList_item['gateStatesValue']['gateStateList']
@@ -82,14 +73,6 @@ def gcl2XML():
                 i+=1
                 switch.createSlotPayloadList.append(slotConfig)
 
-# GetSwitchInfo()
-# gcl2XML()
-# for switch in switchList:
-#     #for item in switch.portInitialPayloadList:
-#         #print(item)
-#     for item in switch.createSlotPayloadList:
-#         print(item)
-
 #通过gcl生成赫斯曼交换机的CLI配置信息
 def gcl2CLI():
     global hirschmannSwitchList
@@ -101,36 +84,28 @@ def gcl2CLI():
         portInfo_gcls=[]
         for portInfo in gcl_dic[switch.ipAddr]['portInfo']:            
             portInfo_gcls.append(gcl_dic[switch.ipAddr]['portInfo'][portInfo])
-
         for singlePort in portInfo_gcls:
             portID=singlePort['portInfo']['value']
             #controlListLength=singlePort['operControlListLength']            
-            #cycleTime=singlePort['operCycleTime']
+            cycleTime=singlePort['operCycleTime']
             gcl_CLIs=''
             slotID=1
             for CtlList_item in singlePort['operControlList']:               
-                timeIntervalValue=CtlList_item['timeIntervalValue']   
-                
-
+                timeIntervalValue=CtlList_item['timeIntervalValue']                   
                 #逐条生成单个端口需要配置的gcl命令行
                 queueIndexList=[]
                 queueDic={queueIndList:gateStateList for queueIndList,gateStateList in zip(CtlList_item['gateStatesValue']['queueIndList'],CtlList_item['gateStatesValue']['gateStateList'])}               
-                for item in queueDic:   #获取单条时间槽中打开的队列
-                    
+                for item in queueDic:   #获取单条时间槽中打开的队列                  
                     if queueDic[item]==1:
                         queueIndexList.append(str(item))
                     else:
                         continue
                 queueIndex=','.join(queueIndexList)
-
                 gcl_CLIs+=raisePayload.raiseSingleGCL_CLI(slotID,queueIndex,timeIntervalValue)
-                slotID+=1
-            #print(gcl_CLIs)
-           
+                slotID+=1                    
            #将单个交换机生成的所有gcl命令行保存在交换机实例中
-            CLIConfPayload=raisePayload.raiseHirschmannSwitchCLI(portID,gcl_CLIs)
-            if CLIConfPayload!=None:
-                #print(CLIConf)
+            CLIConfPayload=raisePayload.raiseHirschmannSwitchCLI(portID,cycleTime,gcl_CLIs)
+            if CLIConfPayload!=None:               
                 switch.CLIConfList.append(CLIConfPayload)
 
 def raiseShell(hirschmannSwitch):
@@ -142,12 +117,8 @@ def raiseShell(hirschmannSwitch):
 user="admin"
 password="private"
 ip="""+'\"'+hirschmannSwitch.ipAddr+'\"'+"""
-        
-{
-sleep 1
-echo "$user";     // 登录用户名
-sleep 1
-echo "$password";     // 登录密码
+sshpass -p $password ssh $user@$ip  <<remotessh  
+
 enbale
 configure\n
 """
@@ -156,43 +127,29 @@ configure\n
         
         ScriptContent+="""
 exit
+save
 exit
 logout
-y         
-}|telnet $ip
+y
+
+remotessh
 """
         return ScriptContent
     
 
-                    
-            
-                   
-    
-        
-GetSwitchInfo()
-gcl2CLI()
 
-
-
-
-
-# """
-# ---------以下由拓扑信息的json文件生成用于初始化交换机的NETCONF标准的XML----------
-# """
-
-
-#由拓扑获取的信息，生成删除交换机端口gcl的xml
+#由拓扑信息的json文件生成用于初始化交换机（删除交换机端口gcl）的NETCONF标准的XML
 def topo2XML():
 
     global moxaSwitchList      
-    GetSwitchInfo()
+    #GetSwitchInfo()
 
     for switch in moxaSwitchList:
         for portID in range(1,1+switch.portNum):
-            #getSlotNumPayload=raisePayload.getSlotIndexPayload(portID)
-            #reply=nc_operations.getConfig(str(switch.ipAddr),getSlotNumPayload)
-            reply="adadadasd"
-            SlotNum=reply.count('<index>')
+            getSlotNumPayload=raisePayload.getSlotIndexPayload(portID)
+            #reply=nc_operations.getConfig(str(switch.ipAddr),getSlotNumPayload)  
+            reply=''         
+            SlotNum=str(reply).count('<index>')
             if SlotNum==0:
                 print('There is no slot in Port ',portID,' of switch',switch.ipAddr)
                 continue

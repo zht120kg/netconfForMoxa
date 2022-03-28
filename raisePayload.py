@@ -1,13 +1,13 @@
 #对端口的gcl使能、时间槽数量和循环时间进行设定
-def portInitialPayload(portID,controlListLength,cycleTime,portEnabled=True,gateEnabled=True):
+def portInitialPayload(portID,controlListLength,cycleTime,portEnabled='true',gateEnabled='true'):
   payload="""
 <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:sched="urn:ieee:std:802.1Q:yang:ieee802-dot1q-sched">
     <interface>
       <name>"""+str(portID)+"""</name>
-      <enabled>"""+str(portEnabled)+"""</enabled>
+      <enabled>"""+portEnabled+"""</enabled>
       <sched:gate-parameters>
-        <sched:gate-enabled>"""+str(gateEnabled)+"""</sched:gate-enabled>
+        <sched:gate-enabled>"""+gateEnabled+"""</sched:gate-enabled>
         <sched:admin-control-list-length>"""+str(controlListLength)+"""</sched:admin-control-list-length>
         <sched:admin-cycle-time>
           <sched:numerator>"""+str(cycleTime)+"""</sched:numerator>
@@ -99,12 +99,15 @@ def raiseSingleGCL_CLI(slotID,queueIndex,timeIntervalValue):
 
 
 
-def raiseHirschmannSwitchCLI(portID,gcl_CLIs):
+def raiseHirschmannSwitchCLI(portID,cycleTime,gcl_CLIs):
   if portID!=1 and portID!=2:  #赫斯曼交换机的常用TSN口只有1口与2口
     return 
     #print("Only Port1 & Port2 are TSN Ports")
   else: 
-    ScriptContent='interface 1/'+str(portID)+'\n'+ gcl_CLIs +'tsn commit\n'+'exit\n'  
+    ScriptContent="""interface 1/"""+str(portID)+"""
+tsn delete all
+tsn gates operation enable
+tsn cycle-time """+str(cycleTime)+'\n'+ gcl_CLIs +'tsn commit\n'+'exit\n'  
     return ScriptContent
 
 
@@ -120,28 +123,3 @@ def raiseHirschmannSwitchCLI(portID,gcl_CLIs):
 
 
   
-
-
-    """
-    !/bin/sh
-    
-    user="admin"
-    password="private"
-    ip="""+ipAddr+"""
-    
-    {
-      sleep 1
-      echo "$user";     // 登录用户名
-      sleep 1
-      echo "$password";     // 登录密码
-      enbale
-      configure
-    """
-
-    """
-      exit
-      exit
-      logout
-      y         
-    }|telnet $ip
-    """
