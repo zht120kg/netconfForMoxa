@@ -1,6 +1,6 @@
 import json
 import raisePayload
-#import nc_operations
+import nc_operations
 
 class switch:
     def __init__(self,ipAddr,portNum):
@@ -147,8 +147,7 @@ def topo2XML():
     for switch in moxaSwitchList:
         for portID in range(1,1+switch.portNum):
             getSlotNumPayload=raisePayload.getSlotIndexPayload(portID)
-            #reply=nc_operations.getConfig(str(switch.ipAddr),getSlotNumPayload)  
-            reply=''         
+            reply=nc_operations.getConfig(str(switch.ipAddr),getSlotNumPayload)           
             SlotNum=str(reply).count('<index>')
             if SlotNum==0:
                 print('There is no slot in Port ',portID,' of switch',switch.ipAddr)

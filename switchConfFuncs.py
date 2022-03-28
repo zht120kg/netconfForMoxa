@@ -1,7 +1,7 @@
 import os
 from stat import  S_IRWXU
 import json2XML
-#import nc_operations
+import nc_operations
 
 
 
@@ -9,14 +9,14 @@ def PortConf(moxaSwitch):
     host=moxaSwitch.ipAddr
     for payload in moxaSwitch.portInitialPayloadList:
         print(payload)
-        #nc_operations.editConfig(host,payload)
+        nc_operations.editConfig(host,payload)
         
 
 def SlotConf(moxaSwitch):
     host=moxaSwitch.ipAddr
     for payload in moxaSwitch.createSlotPayloadList:
         print(payload)
-        #nc_operations.editConfig(host,payload)
+        nc_operations.editConfig(host,payload)
         
 
 
@@ -26,8 +26,8 @@ def CLIConf(hirschmannSwitch):
     with open(ScriptPath,"w") as Script:
           Script.writelines(ScriptContent)
     os.chmod(ScriptPath,S_IRWXU)  #给脚本添加执行权限
-    #data=os.popen(ScriptPath)
-    #print(data.read())
+    data=os.popen(ScriptPath)
+    print(data.read())
 
 
 
@@ -38,9 +38,8 @@ def DeleteGCL():
     json2XML.topo2XML()
 
     for switch in json2XML.moxaSwitchList:
-        for payload in switch.deleteSlotPayloadList:
-            pass
-            #nc_operations.editConfig(str(switch.ipAddr),payload)
+        for payload in switch.deleteSlotPayloadList:            
+            nc_operations.editConfig(str(switch.ipAddr),payload)
             
 json2XML.GetSwitchInfo()
 json2XML.gcl2CLI()     

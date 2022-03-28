@@ -27,8 +27,8 @@ tsn gcl add id 3 gate-states 1,2,3,4,5,6,7 interval 22343000
 tsn commit
 exit
 
-exit
 save
+exit
 exit
 logout
 y
